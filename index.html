@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cooking — Рецепты народов мира</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>🍲 Cooking — Рецепты народов мира</h1>
+    <nav>
+      <ul>
+        <li><a href="recipes/europe.html">Европейская кухня</a></li>
+        <li><a href="recipes/east.html">Восточная кухня</a></li>
+        <li><a href="recipes/mexican.html">Мексиканская кухня</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Добро пожаловать!</h2>
+    <p>Здесь вы найдёте рецепты разных стран и культур 🌍</p>
+  </main>
+
+  <footer>
+    <p>© 2025 Cooking</p>
+  </footer>
+
+  <!-- Netlify Identity -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+</body>
+</html>
